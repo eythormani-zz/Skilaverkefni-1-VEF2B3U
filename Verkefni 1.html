@@ -46,7 +46,9 @@
 // breytan aðferiðinni sem var upprunalega sett í hana.
 
 // 5. 0.5% Hvað eru margar global breytur í kóðanum?
-
+// Hérna eru tvær global breytur, það eru text og sum. Það er hægt að kalla í sum utan for lykkjunar þarna vegna þess að breytan
+// er skilgreind utan scope for lykkjunnar. i er hinsvegar local breyta sem á bara heima í scope-i þessarar for lykku, sem þýðir
+// að ég geti búið til aðra breytu sem heitir i eitthverstaðar seinna í kóðanum, bara ekki í scope-i for lykkjunnar.
 
 // 6. 0.5% Hver er munurinn á A og B þegar kemur að alert(), hvað birtist og útskýrðu hvað “use strict“
 // gerir?
