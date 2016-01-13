@@ -1,88 +1,85 @@
-<!-- All the code is viewable in the console -->
-<script type="text/javascript">
-// Verkefni 1 (10%)
-// grunnatriði og málskipan í JavaScript
-// Bjargir:
-// JavaScript & jQuery eftir Jon Duckett Kafli 1 - 4. og bls.450-457 ( geyma objects bls. 100 – 140)
-// https://www.codecademy.com/tracks/javascript (til og með Data Structure)
-// https://www.codecademy.com/learn/learn-git
+Verkefni 1 (10%)
+grunnatriði og málskipan í JavaScript
+Bjargir:
+JavaScript & jQuery eftir Jon Duckett Kafli 1 - 4. og bls.450-457 ( geyma objects bls. 100 – 140)
+https://www.codecademy.com/tracks/javascript (til og með Data Structure)
+https://www.codecademy.com/learn/learn-git
 
 
-// 1. 0.5% Hvað er ECMASCRIPT?
-// ECMAscript er forritunarmálið sem að að Javascript er byggt á.
+1. 0.5% Hvað er ECMASCRIPT?
+ECMAscript er forritunarmálið sem að að Javascript er byggt á.
 
 
-// 2. 0.5% Afhverju virkar eftirfarandi kóði í JavaScript, útskýrðu?
-// x();
-// function x() {
-//  console.log('x');
-// }
-// Kóðinn í þessu sýnidæmi virkar vegna þess að þegar javascript er túlkað eru aðferðirnar túlkaðar fyrst, til þess nákvæmlega að þetta sé hægt
-// Ef að það er síðan kall í eitthvern function ennþá neðar í skjalinu inni í eitthverjum öðrum function virkar það einnig vegna þess að túlkurinn 
-// fer yfir kóðan áður og finnur 'seinustu' aðferðina og túlkar þær 'top-up'
+2. 0.5% Afhverju virkar eftirfarandi kóði í JavaScript, útskýrðu?
+x();
+function x() {
+ console.log('x');
+}
+Kóðinn í þessu sýnidæmi virkar vegna þess að þegar javascript er túlkað eru aðferðirnar túlkaðar fyrst, til þess nákvæmlega að þetta sé hægt
+Ef að það er síðan kall í eitthvern function ennþá neðar í skjalinu inni í eitthverjum öðrum function virkar það einnig vegna þess að túlkurinn 
+fer yfir kóðan áður og finnur 'seinustu' aðferðina og túlkar þær 'top-up'
 
 
-// 3. 0.5% Útskýrðu línu fyrir línu hvað eftirfarandi kóði gerir
-// (function() {
-// alert('Hello World');
-// })();
-// Fyrst er búið til local scope fyrir kóðabrotið til þess að ekki hægt að kalla á breytur inni í því utan scopesins
-// Síðan er nafnlaus aðferð sem inniheldur einfaldlega alert til notendans. Að lokum er síðan aðferðin látin kalla á sjálfa sig
-// Þetta kallast "Self-executing anonymous function"
+3. 0.5% Útskýrðu línu fyrir línu hvað eftirfarandi kóði gerir
+(function() {
+alert('Hello World');
+})();
+Fyrst er búið til local scope fyrir kóðabrotið til þess að ekki hægt að kalla á breytur inni í því utan scopesins
+Síðan er nafnlaus aðferð sem inniheldur einfaldlega alert til notendans. Að lokum er síðan aðferðin látin kalla á sjálfa sig
+Þetta kallast "Self-executing anonymous function"
 
 
-// 4. 0.5% Útskýrðu línu fyrir línu hvað eftirfarandi kóði gerir
-// var originalFunction = function () {
-//  alert('hello world');
-// }
-// var copiedFunction = originalFunction;
-// var originalFunction = function () {
-//  alert('goodbye world');
-// }
-// copiedFunction()
-// Hérna er búið til breytu sem inniheldur aðferð (function expression) í staðin fyrir að stofna aðferðina sem function decleration
-// Þetta þýðir að aðferðin fer ekki í minnið fyrr en það er kallað á hana eitthverstaðar seinna í kóðanum. Síðan önnur breyta búin til
-// og henni gefið gildi upprunalegu aðferðinnar. Síðan er upprunalega aðferðin endurskilgreind, og þar af leiðandi heldur afritaða
-// breytan aðferiðinni sem var upprunalega sett í hana.
+4. 0.5% Útskýrðu línu fyrir línu hvað eftirfarandi kóði gerir
+var originalFunction = function () {
+ alert('hello world');
+}
+var copiedFunction = originalFunction;
+var originalFunction = function () {
+ alert('goodbye world');
+}
+copiedFunction()
+Hérna er búið til breytu sem inniheldur aðferð (function expression) í staðin fyrir að stofna aðferðina sem function decleration
+Þetta þýðir að aðferðin fer ekki í minnið fyrr en það er kallað á hana eitthverstaðar seinna í kóðanum. Síðan önnur breyta búin til
+og henni gefið gildi upprunalegu aðferðinnar. Síðan er upprunalega aðferðin endurskilgreind, og þar af leiðandi heldur afritaða
+breytan aðferiðinni sem var upprunalega sett í hana.
 
-// 5. 0.5% Hvað eru margar global breytur í kóðanum?
-// Hérna eru tvær global breytur, það eru text og sum. Það er hægt að kalla í sum utan for lykkjunar þarna vegna þess að breytan
-// er skilgreind utan scope for lykkjunnar. i er hinsvegar local breyta sem á bara heima í scope-i þessarar for lykku, sem þýðir
-// að ég geti búið til aðra breytu sem heitir i eitthverstaðar seinna í kóðanum, bara ekki í scope-i for lykkjunnar.
+5. 0.5% Hvað eru margar global breytur í kóðanum?
+Hérna eru tvær global breytur, það eru text og sum. Það er hægt að kalla í sum utan for lykkjunar þarna vegna þess að breytan
+er skilgreind utan scope for lykkjunnar. i er hinsvegar local breyta sem á bara heima í scope-i þessarar for lykku, sem þýðir
+að ég geti búið til aðra breytu sem heitir i eitthverstaðar seinna í kóðanum, bara ekki í scope-i for lykkjunnar.
 
-// 6. 0.5% Hver er munurinn á A og B þegar kemur að alert(), hvað birtist og útskýrðu hvað “use strict“
-// gerir?
-// Ég fæ engan mun til að koma fram, hvorki í chrome né firefox. En með því að runna þetta í nodejs commandlineinu lenti ég í undefined variable villu
-// Síðan, eftir smá gúggl, komst ég að því að þetta virkir svokallað strict mode, sem að hindrar manni til dæmis að nota óskilgreindar breytur.
-
-
-// 7. 0.5% Afhverju virkar eftirfarandi kóðabútur með óskilgreindu breytunni, útskýrðu?
-// var found = true;
-// var result = (found || someUndeclaredVariable); // óskilgr. breyta
-// alert(result); // virkar
-// Hérna kemur út true vegna þess að JavaScript notar það sem kallast Short-Circuit Evaluation þegar verið er að dæma gildi sannleikaspurninga
-// eins og þessar. Þetta mat virkar einfaldlega þannig að í tilfelli or (||) skoðar javascript fyrst aðeins fyrri hluta sannleikaspurningunnar
-// og ef hann er sannur er ekki pælt í hinum hlutanum nánar. Útskýringu á þessu fann ég hér: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
-
-// 8. 4%
-// JavaScript Unit 1 -5 klárað í Codecademy (þ.e. að Data Structures)
-// Skilaðu skjámynd af árangri þínum.
+6. 0.5% Hver er munurinn á A og B þegar kemur að alert(), hvað birtist og útskýrðu hvað “use strict“
+gerir?
+Ég fæ engan mun til að koma fram, hvorki í chrome né firefox. En með því að runna þetta í nodejs commandlineinu lenti ég í undefined variable villu
+Síðan, eftir smá gúggl, komst ég að því að þetta virkir svokallað strict mode, sem að hindrar manni til dæmis að nota óskilgreindar breytur.
 
 
-// 9. 2.5%
-// Náðu í og innstallaðu GIT ef þú ert á eigin tölvu https://git-scm.com/
-// Lærðu að nota Git með terminal og gerðu eftirfarandi Git tutorial:
-// https://www.codecademy.com/learn/learn-git
-// Skilaðu skjámynd af árangri þínum.
-// Skil á verkefni
-// Stofnaðu bitbucket- eða Github aðgang.
-// Github: https://github.com/
-// Bitbucket: https://bitbucket.org (notaðu skírnafn sem notendanafn)
-// Sjá einnig leiðbeiningar á Innu -> Efni -> Server og vinnuumhverfi -> Bitbucket og Version Control
-// (GIT SourceTree)
-// Skilaðu tengil á Verkefni 1 sem er hýst á Github eða Bitbucket
-// Þér er svo frjálst að nota GIT með terminal eða viðmóti (GUI) t.d. sourcetree fyrir bitbucket.
-// Námsmat:
-// Gefið er full fyrir rétt og fullnægjandi svar og skýringu þegar það á við, hálft ef svar eða skýring
-// er ábótavant.
-</script>
+7. 0.5% Afhverju virkar eftirfarandi kóðabútur með óskilgreindu breytunni, útskýrðu?
+var found = true;
+var result = (found || someUndeclaredVariable); // óskilgr. breyta
+alert(result); // virkar
+Hérna kemur út true vegna þess að JavaScript notar það sem kallast Short-Circuit Evaluation þegar verið er að dæma gildi sannleikaspurninga
+eins og þessar. Þetta mat virkar einfaldlega þannig að í tilfelli or (||) skoðar javascript fyrst aðeins fyrri hluta sannleikaspurningunnar
+og ef hann er sannur er ekki pælt í hinum hlutanum nánar. Útskýringu á þessu fann ég hér: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+
+8. 4%
+JavaScript Unit 1 -5 klárað í Codecademy (þ.e. að Data Structures)
+Skilaðu skjámynd af árangri þínum.
+
+
+9. 2.5%
+Náðu í og innstallaðu GIT ef þú ert á eigin tölvu https://git-scm.com/
+Lærðu að nota Git með terminal og gerðu eftirfarandi Git tutorial:
+https://www.codecademy.com/learn/learn-git
+Skilaðu skjámynd af árangri þínum.
+Skil á verkefni
+Stofnaðu bitbucket- eða Github aðgang.
+Github: https://github.com/
+Bitbucket: https://bitbucket.org (notaðu skírnafn sem notendanafn)
+Sjá einnig leiðbeiningar á Innu -> Efni -> Server og vinnuumhverfi -> Bitbucket og Version Control
+(GIT SourceTree)
+Skilaðu tengil á Verkefni 1 sem er hýst á Github eða Bitbucket
+Þér er svo frjálst að nota GIT með terminal eða viðmóti (GUI) t.d. sourcetree fyrir bitbucket.
+Námsmat:
+Gefið er full fyrir rétt og fullnægjandi svar og skýringu þegar það á við, hálft ef svar eða skýring
+er ábótavant.
