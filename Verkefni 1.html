@@ -60,7 +60,9 @@
 // var found = true;
 // var result = (found || someUndeclaredVariable); // óskilgr. breyta
 // alert(result); // virkar
-
+// Hérna kemur út true vegna þess að JavaScript notar það sem kallast Short-Circuit Evaluation þegar verið er að dæma gildi sannleikaspurninga
+// eins og þessar. Þetta mat virkar einfaldlega þannig að í tilfelli or (||) skoðar javascript fyrst aðeins fyrri hluta sannleikaspurningunnar
+// og ef hann er sannur er ekki pælt í hinum hlutanum nánar. Útskýringu á þessu fann ég hér: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
 
 // 8. 4%
 // JavaScript Unit 1 -5 klárað í Codecademy (þ.e. að Data Structures)
